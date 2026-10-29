@@ -1,0 +1,336 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+  <meta name="theme-color" content="#2f3527">
+  <title>The Wedding of Aan & Icha</title>
+  <meta name="description" content="Undangan pernikahan Aan & Icha">
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Amiri:wght@400&family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600;1,400;1,500&family=Jost:wght@300;400;500&family=Pinyon+Script&display=swap" rel="stylesheet">
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css" rel="stylesheet">
+  <link href="style.css" rel="stylesheet">
+  <script>
+    // Didefinisikan di <head> agar tersedia sebelum gambar gagal dimuat
+    window.PLACEHOLDER = 'data:image/svg+xml;utf8,' + encodeURIComponent(
+      '<svg xmlns="http://www.w3.org/2000/svg" width="600" height="800" viewBox="0 0 600 800">' +
+      '<rect width="600" height="800" fill="#d3d8c4"/>' +
+      '<circle cx="300" cy="330" r="92" fill="#b4bca2"/>' +
+      '<ellipse cx="300" cy="720" rx="230" ry="220" fill="#b4bca2"/></svg>');
+  </script>
+</head>
+<body class="locked">
+
+  <!-- Ornamen daun (dipakai berulang) -->
+  <svg width="0" height="0" style="position:absolute" aria-hidden="true" focusable="false">
+    <symbol id="sprig" viewBox="0 0 120 320">
+      <path d="M60 318 C57 220 66 110 60 14" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"/>
+      <g fill="currentColor">
+        <ellipse cx="60" cy="24" rx="8" ry="22"/>
+        <ellipse cx="38" cy="270" rx="9" ry="27" transform="rotate(-42 38 270)"/>
+        <ellipse cx="84" cy="236" rx="9" ry="27" transform="rotate(42 84 236)"/>
+        <ellipse cx="38" cy="206" rx="9" ry="26" transform="rotate(-42 38 206)"/>
+        <ellipse cx="84" cy="172" rx="9" ry="25" transform="rotate(42 84 172)"/>
+        <ellipse cx="40" cy="142" rx="8" ry="24" transform="rotate(-42 40 142)"/>
+        <ellipse cx="82" cy="108" rx="8" ry="22" transform="rotate(42 82 108)"/>
+        <ellipse cx="42" cy="80" rx="7" ry="20" transform="rotate(-40 42 80)"/>
+        <ellipse cx="78" cy="52" rx="7" ry="18" transform="rotate(40 78 52)"/>
+      </g>
+    </symbol>
+  </svg>
+
+  <!-- NAVBAR -->
+  <nav class="navbar navbar-expand-lg fixed-top" id="mainNav">
+    <div class="container">
+      <a class="navbar-brand" href="#home" aria-label="Beranda"><i class="bi bi-heart-fill"></i></a>
+      <div class="d-flex align-items-center order-lg-3 gap-1">
+        <button class="navbar-toggler shadow-none" type="button" data-bs-toggle="collapse" data-bs-target="#navMenu" aria-label="Menu">
+          <i class="bi bi-list"></i>
+        </button>
+      </div>
+      <div class="collapse navbar-collapse justify-content-center" id="navMenu">
+        <ul class="navbar-nav">
+          <li class="nav-item"><a class="nav-link" href="#home">Home</a></li>
+          <li class="nav-item"><a class="nav-link" href="#mempelai">Mempelai</a></li>
+          <li class="nav-item"><a class="nav-link" href="#acara">Acara</a></li>
+          <li class="nav-item"><a class="nav-link" href="#lokasi">Lokasi</a></li>
+          <li class="nav-item"><a class="nav-link" href="#galeri">Galeri</a></li>
+          <li class="nav-item"><a class="nav-link" href="#ucapan">Ucapan</a></li>
+        </ul>
+      </div>
+    </div>
+  </nav>
+
+  <!-- 1. HALAMAN PEMBUKA -->
+  <header id="home" class="hero">
+    <div class="hero-hearts" aria-hidden="true">
+      <span class="hero-heart hero-heart--one">♥</span>
+      <span class="hero-heart hero-heart--two">♥</span>
+      <span class="hero-heart hero-heart--three">♥</span>
+      <span class="hero-heart hero-heart--four">♥</span>
+      <span class="hero-heart hero-heart--five">♥</span>
+      <span class="hero-heart hero-heart--six">♥</span>
+      <span class="hero-heart hero-heart--seven">♥</span>
+    </div>
+    <svg class="sprig sprig--a" viewBox="0 0 120 320" aria-hidden="true"><use href="#sprig"/></svg>
+    <svg class="sprig sprig--b" viewBox="0 0 120 320" aria-hidden="true"><use href="#sprig"/></svg>
+    <svg class="sprig sprig--c" viewBox="0 0 120 320" aria-hidden="true"><use href="#sprig"/></svg>
+
+    <div class="container position-relative">
+      <div class="row align-items-center justify-content-center g-4 g-lg-5">
+        <div class="col-lg-6 order-2 order-lg-1 text-center hero__text">
+          <p class="hero__lead"><i class="bi bi-heart-fill"></i> The Wedding Of</p>
+          <h1 class="script hero__names">Aan <span>&amp;</span> Icha</h1>
+          <p class="hero__date">Kamis, 05 November 2026</p>
+
+          <div class="guest-box">
+            <p class="mb-1">Kepada Yth.</p>
+            <p class="guest-box__name mb-0">Bapak/Ibu/Saudara/i<span id="guestName"></span></p>
+          </div>
+
+          <p class="hero__note">Tanpa mengurangi rasa hormat, kami mengundang Anda untuk hadir dalam acara pernikahan kami.</p>
+          <button class="btn btn-gold" id="openBtn"><i class="bi bi-envelope-open-heart me-2"></i>Buka Undangan</button>
+        </div>
+
+        <div class="col-lg-5 order-1 order-lg-2 hero__photo">
+          <div class="arch arch--hero">
+            <img src="foto/foto.jpeg" alt="Foto Icha dan Aan" onerror="this.onerror=null;this.src=PLACEHOLDER;">
+          </div>
+        </div>
+      </div>
+    </div>
+  </header>
+
+  <main id="content">
+
+    <!-- SALAM & AYAT -->
+    <section id="salam" class="sec sec--ivory">
+      <div class="container">
+        <div class="verse">
+            <p class="verse__greet">Assalamu'alaikum Warahmatullahi Wabarakatuh</p>
+          <p class="verse__ar" lang="ar" dir="rtl">بِسْمِ اللَّهِ الرَّحْمَنِ الرَّحِيمِ</p>
+          <p class="verse__ar" lang="ar" dir="rtl">وَمِنْ اٰيٰتِهٖٓ اَنْ خَلَقَ لَكُمْ مِّنْ اَنْفُسِكُمْ اَزْوَاجًا لِّتَسْكُنُوْٓا اِلَيْهَا وَجَعَلَ بَيْنَكُمْ مَّوَدَّةً وَّرَحْمَةً ۗ اِنَّ فِىْ ذٰلِكَ لَاٰيٰتٍ لِّقَوْمٍ</p>
+          <div class="orn"><i class="bi bi-heart-fill"></i></div>
+          <blockquote class="verse__text">
+            "Dan di antara tanda-tanda (kebesaran)-Nya ialah Dia menciptakan pasangan-pasangan untukmu dari jenismu sendiri, agar kamu cenderung dan merasa tenteram kepadanya, dan Dia menjadikan di antaramu rasa kasih dan sayang. Sungguh, pada yang demikian itu benar-benar terdapat tanda-tanda (kebesaran Allah) bagi kaum yang berpikir."
+          </blockquote>
+          <p class="verse__src">QS. Ar-Rum: 21</p>
+        </div>
+      </div>
+    </section>
+
+    <!-- 2. MEMPELAI -->
+    <section id="mempelai" class="sec sec--paper">
+      <svg class="sprig sprig--d" viewBox="0 0 120 320" aria-hidden="true"><use href="#sprig"/></svg>
+      <svg class="sprig sprig--e" viewBox="0 0 120 320" aria-hidden="true"><use href="#sprig"/></svg>
+      <div class="container text-center position-relative">
+        <h2 class="sec__title">Mempelai</h2>
+        <p class="sec__sub">Dua hati, satu tujuan, menuju ridha Allah</p>
+        <div class="row align-items-center justify-content-center g-4 mt-2">
+          <div class="col-md-5">
+            <div class="arch arch--sm"><img src="foto/foto-pria.png" alt="Muhammad Anas" onerror="this.onerror=null;this.src=PLACEHOLDER;"></div>
+            <h3 class="script person">Muhammad Anas</h3>
+            <p class="parents">Putra dari<br>Bapak Muhtadi<br>&amp; Ibu Zulaiha</p>
+          </div>
+          <div class="col-md-2 d-flex justify-content-center"><span class="script amp">&amp;</span></div>
+          <div class="col-md-5">
+            <div class="arch arch--sm"><img src="foto/foto-wanita.png" alt="Siti Nur Kholizah" onerror="this.onerror=null;this.src=PLACEHOLDER;"></div>
+            <h3 class="script person">Siti Nur Kholizah</h3>
+            <p class="parents">Putri dari<br>Bapak Zaini (alm)<br>&amp; Ibu Asia (almh)</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- 3. JADWAL ACARA -->
+    <section id="acara" class="sec sec--ivory">
+      <div class="container text-center">
+        <h2 class="sec__title">Jadwal Acara</h2>
+        <div class="orn"><i class="bi bi-heart-fill"></i></div>
+        <p class="sec__sub">Kami mengundang Bapak/Ibu/Saudara/i untuk hadir<br class="d-none d-md-block"> dalam acara pernikahan kami</p>
+
+        <div class="row g-4 mt-2">
+          <div class="col-lg-6">
+            <article class="event">
+              <div class="event__date"><b>07</b><span>Oktober 2026</span><em>Rabu</em></div>
+              <div class="event__body">
+                <h3>Akad Nikah</h3>
+                <p><i class="bi bi-clock"></i>17.25 WIB – Selesai</p>
+                <p><i class="bi bi-geo-alt-fill"></i><span><strong>Dawuhan</strong><br>
+                  <small>Jl. Melati No. 12, Desa Suka Maju<br>Kec. Cempaka, Kab. Banjar</small></span></p>
+              </div>
+            </article>
+          </div>
+          <div class="col-lg-6">
+            <article class="event">
+              <div class="event__date"><b>19</b><span>Juni 2027</span><em>Sabtu</em></div>
+              <div class="event__body">
+                <h3>Resepsi Pernikahan</h3>
+                <p><i class="bi bi-clock"></i>11.00 WIB – Selesai</p>
+                <p><i class="bi bi-geo-alt-fill"></i><span><strong>Gedung Serbaguna Al-Ikhlas</strong><br>
+                  <small>Jl. Melati No. 12, Desa Suka Maju<br>Kec. Cempaka, Kab. Banjar</small></span></p>
+              </div>
+            </article>
+          </div>
+        </div>
+        <button class="btn btn-outline-olive mt-4" id="calBtn"><i class="bi bi-calendar-plus me-2"></i>Simpan ke Kalender</button>
+      </div>
+    </section>
+
+    <!-- 4. LOKASI -->
+    <section id="lokasi" class="sec sec--paper">
+      <div class="container text-center">
+        <h2 class="sec__title">Lokasi Acara</h2>
+        <div class="orn"><i class="bi bi-heart-fill"></i></div>
+        <p class="sec__sub">Tempat acara pernikahan kami berlokasi di:</p>
+        <div class="row g-4 mt-2 align-items-stretch">
+          <div class="col-lg-5">
+            <div class="place">
+              <i class="bi bi-geo-alt-fill place__pin"></i>
+              <h3>Gedung Serbaguna Al-Ikhlas</h3>
+              <p>Jl. Melati No. 12, Desa Suka Maju<br>Kec. Cempaka, Kab. Banjar</p>
+              <a class="btn btn-olive" target="_blank" rel="noopener"
+                 href="https://www.google.com/maps/embed?pb=!1m17!1m12!1m3!1d3952.9452499781432!2d113.42599577500503!3d-7.795621792224446!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m2!1m1!2zN8KwNDcnNDQuMiJTIDExM8KwMjUnNDIuOSJF!5e0!3m2!1sen!2sid!4v1793255998840!5m2!1sen!2sid" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="strict-origin-when-cross-origin">
+                <i class="bi bi-geo-alt me-2"></i>Lihat di Google Maps</a>
+            </div>
+          </div>
+          <div class="col-lg-7">
+            <div class="map-frame">
+              <iframe src="https://www.google.com/maps/embed?pb=!1m17!1m12!1m3!1d3952.9452499781432!2d113.42599577500503!3d-7.795621792224446!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m2!1m1!2zN8KwNDcnNDQuMiJTIDExM8KwMjUnNDIuOSJF!5e0!3m2!1sen!2sid!4v1793255998840!5m2!1sen!2sid" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="strict-origin-when-cross-origin"></iframe>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- 5. HITUNG MUNDUR -->
+    <section id="countdown" class="sec sec--dark">
+      <svg class="sprig sprig--f" viewBox="0 0 120 320" aria-hidden="true"><use href="#sprig"/></svg>
+      <svg class="sprig sprig--g" viewBox="0 0 120 320" aria-hidden="true"><use href="#sprig"/></svg>
+      <div class="container text-center position-relative">
+        <h2 class="script cd-title">Hitung Mundur</h2>
+        <p class="sec__sub sec__sub--light">Menuju hari bahagia kami</p>
+        <div class="orn"><i class="bi bi-heart-fill"></i></div>
+        <div class="timer" id="timer" role="timer" aria-live="off">
+          <div class="time-box"><span id="cd-months">00</span><small>Bulan</small></div>
+          <div class="time-box"><span id="cd-days">00</span><small>Hari</small></div>
+          <div class="time-box"><span id="cd-hours">00</span><small>Jam</small></div>
+          <div class="time-box"><span id="cd-minutes">00</span><small>Menit</small></div>
+          <div class="time-box"><span id="cd-seconds">00</span><small>Detik</small></div>
+        </div>
+      </div>
+    </section>
+
+    <!-- 6. GALERI -->
+    <section id="galeri" class="sec sec--ivory">
+      <div class="container text-center">
+        <p class="gallery-kicker"><span></span> Momen Bersama <span></span></p>
+        <h2 class="sec__title">Galeri Foto</h2>
+        <p class="sec__sub">Beberapa momen indah perjalanan kami</p>
+        <div class="gallery-wrap">
+          <button class="g-arrow" id="gPrev" aria-label="Foto sebelumnya"><i class="bi bi-chevron-left"></i></button>
+          <div class="gallery" id="gallery" aria-label="Galeri foto pasangan">
+            <figure class="gallery__item"><span class="gallery__number">01</span><img src="foto/foto01.jpeg" alt="Foto Icha dan Aan" onerror="this.onerror=null;this.src=PLACEHOLDER;"></figure>
+            <figure class="gallery__item"><span class="gallery__number">02</span><img src="foto/foto02.jpeg" alt="Galeri 2" onerror="this.onerror=null;this.src=PLACEHOLDER;"></figure>
+            <figure class="gallery__item"><span class="gallery__number">03</span><img src="foto/foto3.jpeg" alt="Galeri 3" onerror="this.onerror=null;this.src=PLACEHOLDER;"></figure>
+            <figure class="gallery__item"><span class="gallery__number">04</span><img src="foto/foto4.jpeg" alt="Galeri 4" onerror="this.onerror=null;this.src=PLACEHOLDER;"></figure>
+            <figure class="gallery__item"><span class="gallery__number">05</span><img src="foto/foto5.jpeg" alt="Galeri 5" onerror="this.onerror=null;this.src=PLACEHOLDER;"></figure>
+            <figure class="gallery__item"><span class="gallery__number">06</span><img src="img/g6.jpg" alt="Galeri 6" onerror="this.onerror=null;this.src=PLACEHOLDER;"></figure>
+          </div>
+          <button class="g-arrow" id="gNext" aria-label="Foto berikutnya"><i class="bi bi-chevron-right"></i></button>
+        </div>  
+        <div class="dots" id="gDots"></div>
+      </div>
+    </section>
+
+    <!-- 7. BUKU TAMU -->
+    <section id="ucapan" class="sec sec--paper">
+      <div class="container">
+        <h2 class="sec__title text-center">Buku Tamu</h2>
+        <p class="sec__sub text-center">Tinggalkan ucapan dan doa untuk kami</p>
+        <div class="row g-4 g-lg-5 mt-1">
+          <div class="col-lg-5">
+            <form id="wishForm" class="wish-form" novalidate>
+              <label class="visually-hidden" for="wishName">Nama Anda</label>
+              <div class="input-group mb-3">
+                <span class="input-group-text"><i class="bi bi-person"></i></span>
+                <input type="text" id="wishName" class="form-control" placeholder="Nama Anda" maxlength="50" required>
+              </div>
+              <label class="visually-hidden" for="wishAtt">Konfirmasi kehadiran</label>
+              <div class="input-group mb-3">
+                <span class="input-group-text"><i class="bi bi-calendar-check"></i></span>
+                <select id="wishAtt" class="form-select">
+                  <option value="Hadir">Insya Allah, saya hadir</option>
+                  <option value="Ragu">Masih ragu-ragu</option>
+                  <option value="Tidak">Mohon maaf, tidak bisa hadir</option>
+                </select>
+              </div>
+              <label class="visually-hidden" for="wishMsg">Ucapan dan doa</label>
+              <div class="input-group mb-3">
+                <span class="input-group-text align-items-start pt-3"><i class="bi bi-pencil-square"></i></span>
+                <textarea id="wishMsg" class="form-control" rows="4" placeholder="Ucapan / Doa" maxlength="300" required></textarea>
+              </div>
+              <p class="form-hint" id="formHint" role="alert"></p>
+              <button type="submit" class="btn btn-olive w-100"><i class="bi bi-send me-2"></i>Kirim</button>
+            </form>
+          </div>
+          <div class="col-lg-7">
+            <div id="wishList" class="wish-list" aria-live="polite"></div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- 8. FOOTER -->
+    <footer class="footer">
+      <svg class="sprig sprig--h" viewBox="0 0 120 320" aria-hidden="true"><use href="#sprig"/></svg>
+      <svg class="sprig sprig--i" viewBox="0 0 120 320" aria-hidden="true"><use href="#sprig"/></svg>
+      <div class="footer__top container text-center position-relative">
+        <div class="orn"><i class="bi bi-heart-fill"></i></div>
+        <h2 class="script thanks">Terima Kasih</h2>
+        <p>Atas doa dan restu yang telah diberikan<br>kepada kami.</p>
+        <p class="script footer__names">Aan &amp; Icha</p>
+        <p class="footer__salam">Wassalamu'alaikum Warahmatullahi Wabarakatuh</p>
+      </div>
+      <div class="footer__bottom text-center">
+        <div class="socials">
+          <a href="#" aria-label="Instagram"><i class="bi bi-instagram"></i></a>
+          <a href="#" aria-label="WhatsApp"><i class="bi bi-whatsapp"></i></a>
+          <a href="#" aria-label="YouTube"><i class="bi bi-youtube"></i></a>
+        </div>
+        <small>&copy; <span id="year">2026</span> Aan &amp; Icha. All rights reserved.</small>
+      </div>
+    </footer>
+  </main>
+
+  <!-- Lightbox foto -->
+  <div class="modal fade" id="lightbox" tabindex="-1" aria-label="Foto">
+    <div class="modal-dialog modal-dialog-centered modal-lg">
+      <div class="modal-content bg-transparent border-0">
+        <button type="button" class="btn-close btn-close-white ms-auto mb-2" data-bs-dismiss="modal" aria-label="Tutup"></button>
+        <img id="lbImg" class="img-fluid rounded mx-auto" alt="">
+      </div>
+    </div>
+  </div>
+
+  <div class="music-player" id="musicPlayer">
+    <button class="music-player__btn" id="musicBtn" type="button" aria-label="Putar musik">
+      <i class="bi bi-play-fill"></i>
+    </button>
+    <div class="music-player__info">
+      <span>Musik Latar</span>
+      <small id="musicStatus">Ketuk untuk memutar</small>
+    </div>
+    <i class="bi bi-music-note-list music-player__icon" aria-hidden="true"></i>
+  </div>
+
+  <!-- Musik latar: letakkan file audio di audio/musik.mp3 -->
+  <audio id="bgm" loop preload="none" src="musik/sesi-potret.mpeg"></audio>
+
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+  <script src="script.js"></script>
+</body>
+</html>
